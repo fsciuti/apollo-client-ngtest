@@ -1,0 +1,10 @@
+<app-table>
+  <thead appTableHead [fields]="propertyFields"></thead>
+  <tbody appTableBody>
+    <tr *ngFor="let property of properties">
+      <td>{{ property.id }}</td>
+      <td>{{ property.name }}</td>
+      <td>{{ property.type | titlecase }}</td>
+    </tr>
+  </tbody>
+</app-table>

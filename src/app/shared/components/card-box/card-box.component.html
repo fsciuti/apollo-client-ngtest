@@ -1,0 +1,8 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title" *ngIf="title">{{ title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted" *ngIf="subtitle">{{ subtitle }}</h6>
+    <p class="card-text" *ngIf="text">{{ text }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

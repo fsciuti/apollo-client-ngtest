@@ -1,0 +1,33 @@
+<dl class="row">
+  <dt class="col-sm-3">Proprietà</dt>
+  <dd class="col-sm-9">{{ booking.property.name }}</dd>
+
+  <dt class="col-sm-3">Tipologia</dt>
+  <dd class="col-sm-9">
+    <p>{{ booking.property.type | titlecase }}</p>
+  </dd>
+
+  <dt class="col-sm-3">Date</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Inizio</dt>
+      <dd class="col-sm-8">{{ booking.startTime | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+    <dl class="row">
+      <dt class="col-sm-4">Fine</dt>
+      <dd class="col-sm-8">{{ booking.endTime | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+  </dd>
+
+  <dt class="col-sm-3">Cliente</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Nome</dt>
+      <dd class="col-sm-8">{{ booking.customer.name }}</dd>
+    </dl>
+    <dl class="row">
+      <dt class="col-sm-4">Email</dt>
+      <dd class="col-sm-8">{{ booking.customer.email }}</dd>
+    </dl>
+  </dd>
+</dl>

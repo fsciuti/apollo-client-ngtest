@@ -1,0 +1,23 @@
+<form class="form-inline" #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group mr-2">
+    <label class="sr-only" for="propertyId">Codice Proprietà</label>
+    <select class="form-control" name="propertyId" ngModel placeholder="Codice Proprietà">
+      <option *ngFor="let property of properties" value="{{ property.id }}">{{ property.name }}</option>
+    </select>
+  </div>
+  <div class="form-group mr-2">
+    <label class="sr-only" for="customerId">Codice Cliente</label>
+    <select class="form-control" name="customerId" ngModel placeholder="Codice Cliente">
+      <option *ngFor="let customer of customers" value="{{ customer.id }}">{{ customer.name }}</option>
+    </select>
+  </div>
+  <div class="form-group mr-2">
+    <label class="sr-only" for="startTime">Data inizio</label>
+    <input type="text" class="form-control" name="startTime" ngModel placeholder="Data inizio">
+  </div>
+  <div class="form-group mr-2">
+    <label class="sr-only" for="endTime">Data Fine</label>
+    <input type="text" class="form-control" name="endTime" ngModel placeholder="Data fine">
+  </div>
+  <button type="submit" class="btn btn-sm btn-secondary float-right">Aggiungi</button>
+</form>

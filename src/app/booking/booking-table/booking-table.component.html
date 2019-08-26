@@ -1,0 +1,14 @@
+<app-table>
+  <thead appTableHead [fields]="bookingFields"></thead>
+  <tbody appTableBody>
+      <tr *ngFor="let booking of bookings">
+        <th scope="row">{{ booking.id }}</th>
+        <td>{{ booking.property.name }}</td>
+        <td>{{ booking.property.type | titlecase }}</td>
+        <td>{{ booking.customer.name }}</td>
+        <td>{{ booking.startTime | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ booking.endTime | date: 'dd/MM/yyyy' }}</td>
+        <td><button type="button" class="btn btn-primary btn-sm" (click)="selectBooking(booking)">Dettagli</button></td>
+      </tr>
+  </tbody>
+</app-table>

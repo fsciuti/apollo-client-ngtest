@@ -1,0 +1,10 @@
+<div class="row mt-4">
+    <div class="col-md-12">
+      <app-card-box title="Aggiungi una Cliente">
+          <app-customer-quick-form (submitted)="addCustomer($event)"></app-customer-quick-form>
+      </app-card-box>
+      <app-card-box title="I Clienti">
+        <app-customer-table></app-customer-table>
+      </app-card-box>
+    </div>
+</div>

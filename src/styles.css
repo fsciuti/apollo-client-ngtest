@@ -1,0 +1,5 @@
+app-side-box .form-inline .form-control, app-side-box .form-inline .form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: .2rem;
+}

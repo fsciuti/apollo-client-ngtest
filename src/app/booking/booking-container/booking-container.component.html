@@ -1,0 +1,37 @@
+<div class="row mt-4">
+  <div class="col-md-8">
+    <app-card-box title="Aggiungi una Prenotazione">
+      <app-booking-quick-form (submitted)="addBooking($event)"></app-booking-quick-form>
+    </app-card-box>
+    <app-card-box title="Le ultime prenotazioni">
+      <p>Loading...</p>
+      <app-booking-table (selectedBooking)="setActiveBooking($event)">
+      </app-booking-table>
+      <hr />
+      <footer>
+        <button type="button" class="btn btn-link btn-sm float-right" (click)="moreRecords()">Carica altri</button>
+      </footer>
+    </app-card-box>
+  </div>
+  <aside class="col-md-4">
+    <app-side-box>
+      <app-card-box title="Prenotazione In Evidenza">
+        <app-booking-quick-detail>
+        </app-booking-quick-detail>
+      </app-card-box>
+      <ng-template #noActiveBooking>
+        <p>Nessuna prenotazione selezionata!</p>
+      </ng-template>
+    </app-side-box>
+    <app-side-box>
+      <app-card-box title="Aggiungi un Cliente">
+        <app-customer-quick-form (submitted)="addCustomer($event)"></app-customer-quick-form>
+      </app-card-box>
+    </app-side-box>
+    <app-side-box>
+      <app-card-box title="Aggiungi un Proprietà">
+        <app-property-quick-form (submitted)="addProperty($event)"></app-property-quick-form>
+      </app-card-box>
+    </app-side-box>
+  </aside>
+</div>

@@ -1,0 +1,10 @@
+<div class="row mt-4">
+    <div class="col-md-12">
+      <app-card-box title="Aggiungi una Proprietà">
+          <app-property-quick-form (submitted)="addProperty($event)"></app-property-quick-form>
+      </app-card-box>
+      <app-card-box title="Le Proprietà">
+        <app-property-table></app-property-table>
+      </app-card-box>
+    </div>
+</div>

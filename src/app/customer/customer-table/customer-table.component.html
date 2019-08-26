@@ -1,0 +1,17 @@
+<app-table>
+  <thead appTableHead [fields]="customerFields"></thead>
+  <tbody appTableBody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let booking of customer.bookings">
+              {{ booking.property.name }}: {{ booking.startTime }} / {{ booking.startTime }}
+            </li>
+          </ul>
+        </td>
+      </tr>
+  </tbody>
+</app-table>
